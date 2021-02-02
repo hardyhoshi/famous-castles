@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   end
 
   def edit
+    if @user != current_user
+      redirect_to users_path, alert: '不正なアクセスです。あなたはこのユーザーではありません。'
+    end
   end
 
   def update

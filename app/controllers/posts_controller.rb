@@ -21,6 +21,9 @@ class PostsController < ApplicationController
   end
 
   def edit
+    if @post.user != current_user
+      redirect_to posts_path, alert: '不正なアクセスです。あなたはこのユーザーではありません。'
+    end
   end
   
   def update
