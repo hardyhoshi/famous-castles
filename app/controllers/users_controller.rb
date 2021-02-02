@@ -16,8 +16,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update(user_params)
-    redirect_to user_path(@user)
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: '更新に成功しました'
+    else
+      render :edit
+    end
   end
 
   private
