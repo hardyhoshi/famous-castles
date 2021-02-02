@@ -22,3 +22,10 @@
 .profile_image {
   border-radius: 50%;
 }
+
+.main-image {
+  height: 960px;
+  background-image: url(top-image.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
