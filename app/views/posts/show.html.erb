@@ -40,6 +40,25 @@
           </div>
         </div>
       </div>
+
+      <div class="column is-4">
+        <article class="panel is-link">
+          <p class="panel-heading">
+            By <%= @post.user.nickname %>
+          </p>
+          <div class="panel-block">
+            <p class="control">
+              <%= @post.user.profile %>
+            </p>
+          </div>
+          <%= link_to user_path(@post.user), class: "panel-block" do %>
+            <span class="panel-icon">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </span>
+            <%= @post.user.nickname %> さんのページへ
+          <% end %>
+        </article>
+      </div>
     </div>
   </div>
 </section>
