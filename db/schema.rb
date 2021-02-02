@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2021_02_01_072109) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.text "body"
-    t.string "image_id"
+    t.string "name", null: false
+    t.text "body", null: false
+    t.string "image_id", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_02_01_072109) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "nickname"
+    t.string "nickname", null: false
     t.text "profile"
     t.string "profile_image_id"
     t.datetime "created_at", precision: 6, null: false
