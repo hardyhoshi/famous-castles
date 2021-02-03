@@ -24,8 +24,41 @@
 }
 
 .main-image {
-  height: 960px;
   background-image: url(top-image.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: 960px;
+  resize: horizontal;
+  h2 {
+    text-align: center;
+    font-size: 8rem;
+    color: #FF99FF	;
+    padding-top: 20%;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-family: "游明朝",YuMincho,"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","HGS明朝E",serif;
+  }
+}
+
+.head_post {
+  width: 100%;
+  h2 {
+    width: 100%;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 120px 0 0;
+    text-align: center;
+    font-family: "游明朝",YuMincho,"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","HGS明朝E",serif;
+    font-size: 28px;
+  }
 }
