@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="main-image menu-content">
+  <h2>日本100名城に行こう</h2>
+</div>
+
+<div class="head_post">
+    <h2>みんなの投稿</h2>
+  </div>
+<div class="wrapper grid">
+  <% @posts.each do |post| %>
+    <div class="item">
+      <h2><%= post.name %></h2>
+      <%= link_to post_path(post.id) do %>
+        <%= attachment_image_tag post, :image %>
+      <% end %>
+      <p>コメント: <%= post.body %></p>
+      <p>投稿者: 
+        <%= link_to user_path(post.id) do %>
+          <%= post.user.nickname %>
+        <% end %></p>
+    </div>
+  <% end %>
+</div>
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dQbEaPguM8vXuQpqM6VHZi_5OySdKzp8" width="640" height="480"></iframe>
