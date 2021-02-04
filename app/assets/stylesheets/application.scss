@@ -24,7 +24,7 @@
 }
 
 .main-image {
-  background-image: url(top-image.jpg);
+  background-image: image-url("top-image.jpg");
   height: 960px;
   resize: horizontal;
   h2 {
