@@ -1,14 +1,14 @@
 ## アプリケーション名
-famous-castles
+「famous-castles」
 
 ## アプリケーションの概要
 100名城を訪ね、行った時の写真や感想を投稿できる。
 
 ## URL
-デプロイ後に記述予定
+https://famous-castles.herokuapp.com/
 
 ## テスト用アカウント
-email: panda@panda
+email: panda@panda  
 password: 1a1a1a
 
 ## 利用方法
@@ -18,7 +18,10 @@ password: 1a1a1a
 自分が100名城を訪ねた時に駐車場から徒歩で天守までのどれくらいかかるか、滞在時間、駐車場有無などが気になったため。
 
 ## 洗い出した要件
-スプレッドシートにまとめた要件定義を、マークダウンで記述しなおしましょう。
+機能|目的|詳細|ストーリー
+-|-|-|-
+トップページ|投稿内容を表示・各機能へアクセスできるように|【ボタン】<br>・サインイン／ログインページへ遷移できるボタンがある<br>・ログイン時は、ログアウトボタンがある<br>・投稿写真から詳細ページに遷移できる<br>・みんなの投稿・ユーザー一覧ボタンがありそれぞれのページにアクセスできる|「100名城に行こう」の本を買った人が行こうと思った時にお城の情報を知りたい。
+
 
 ## 実装した機能についてのGIFと説明
 実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
@@ -44,6 +47,9 @@ password: 1a1a1a
 | name               | string | null: false |
 | body               | text   | null: false |
 
+### Association
+- belongs_to :user
+
 ## ローカルでの動作方法
 ```
 $ git clone https://github.com/hardyhoshi/famous-castles.git
@@ -52,6 +58,10 @@ $ bundle install
 $ rails db:create
 $ rails db:migrate
 $ rails s
+
 # http://localhost:3000 へアクセス
 ```
-動作確認：(ruby 2.6.5, rails 6.0.0) 
+開発環境
+Rails : 6.0.3.4  
+Ruby  : 2.6.5  
+DB    : MySQL
