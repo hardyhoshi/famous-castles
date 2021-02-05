@@ -25,15 +25,24 @@ password: 1a1a1a
 ユーザー一覧表示機能|たくさんのお城に行ってる人がいるか知るため|気になった人の投稿を見ることができる。|
 ユーザー編集機能|ユーザー情報を編集できるようにする|email,password,profile,画像を編集できる|
 投稿機能|訪ねたお城の投稿ができる|お城名、感想、画像を投稿できる|
-
-
+複数画像投稿機能|たくさん写真を投稿したい場合に備えて|-|-
+お城情報機能|100名城の情報が見える|1城ずつ城の情報やコメント、マップが見れる|
+S3|heroku上で長期的に画像を表示させるため|AWSを利用|-
+100名城マップ機能|トップページにグーグルマップを埋め込む|城を選びクリックするとルートを調べることができる
+検索機能|お城情報を知るため|トップページの検索窓からキーワードを入力するとお城のコメント等が見れる|
+絵文字対応機能|絵文字で入力した場合に対応する|||
 
 
 ## 実装した機能についてのGIFと説明
 実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
 
 ## 実装予定の機能
-洗い出した要件の中から、今後実装予定のものがあれば記述しましょう。
+- 絵文字対応機能
+- 100名城マップ機能
+- s3
+
+## ER図
+![ER](https://user-images.githubusercontent.com/75361827/106983486-52219a80-67a9-11eb-99bc-a24778b9b9b5.png)
 
 ## データベース設計
 
@@ -43,6 +52,8 @@ password: 1a1a1a
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false |
 | nickname           | string | null: false |
+| profile            | text   |             |
+| profile_image_id   | string |             |
 
 ### Association
 - has_many :posts
@@ -52,6 +63,8 @@ password: 1a1a1a
 | ------------------ | ------ | ----------- |
 | name               | string | null: false |
 | body               | text   | null: false |
+| image_id           | string | null: false |
+| body               | string | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
