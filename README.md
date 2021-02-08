@@ -30,15 +30,23 @@ password: 1a1a1a
 S3|heroku上で長期的に画像を表示させるため|AWSを利用|-
 100名城マップ機能|トップページにグーグルマップを埋め込む|城を選びクリックするとルートを調べることができる
 検索機能|お城情報を知るため|トップページの検索窓からキーワードを入力するとお城のコメント等が見れる|
-絵文字対応機能|絵文字で入力した場合に対応する|||
 
 
 ## 実装した機能についてのGIFと説明
-実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
+### ユーザー登録機能
+![c451c9063ff624ccc95c31113b236d4f](https://user-images.githubusercontent.com/75361827/107221821-7d311600-6a57-11eb-9c75-5ca84ceda663.gif)
+### ユーザー編集機能
+![487c6e429ec495aa0ff11d53fc984902](https://user-images.githubusercontent.com/75361827/107221982-b23d6880-6a57-11eb-8ef5-98dc8c1c7eed.gif)
+### ユーザー一覧・詳細機能
+![cd1521d8521bea52c0940556f6de3063](https://user-images.githubusercontent.com/75361827/107222200-f892c780-6a57-11eb-92bc-d0e72653d2de.gif)
+### 投稿機能
+![64bb2f6a4974151b858fa2feb0d0b494](https://user-images.githubusercontent.com/75361827/107222070-cd0fdd00-6a57-11eb-92f8-013635a6e868.gif)
+### 投稿一覧表示・編集機能
+![6cc07c760468a3983805aeceef4da632](https://user-images.githubusercontent.com/75361827/107222324-1d873a80-6a58-11eb-8d6e-3ba9993f5e63.gif)
+### 100名城マップ機能
+![map](https://user-images.githubusercontent.com/75361827/107222900-d5b4e300-6a58-11eb-869d-d2cd40e383d2.gif)
 
 ## 実装予定の機能
-- 絵文字対応機能
-- 100名城マップ機能
 - s3
 
 ## ER図
