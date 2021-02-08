@@ -44,7 +44,7 @@ S3|heroku上で長期的に画像を表示させるため|AWSを利用|-
 ### 投稿一覧表示・編集機能
 ![6cc07c760468a3983805aeceef4da632](https://user-images.githubusercontent.com/75361827/107222324-1d873a80-6a58-11eb-8d6e-3ba9993f5e63.gif)
 ### 100名城マップ機能
-![map](https://user-images.githubusercontent.com/75361827/107222900-d5b4e300-6a58-11eb-869d-d2cd40e383d2.gif)
+![182a5d0e0ee4e37fb0044b7261bed9a9](https://user-images.githubusercontent.com/75361827/107223546-a652a600-6a59-11eb-950a-a89822845b73.gif)
 
 ## 実装予定の機能
 - s3
