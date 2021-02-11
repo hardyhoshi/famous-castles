@@ -7,5 +7,4 @@ class Post < ApplicationRecord
     validates :body
     validates :image
   end
-  
 end

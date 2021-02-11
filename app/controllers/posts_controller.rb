@@ -24,11 +24,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if @post.user != current_user
-      redirect_to posts_path, alert: '不正なアクセスです。あなたはこのユーザーではありません。'
-    end
+    redirect_to posts_path, alert: '不正なアクセスです。あなたはこのユーザーではありません。' if @post.user != current_user
   end
-  
+
   def update
     if @post.update(post_params)
       redirect_to post_path(@post), notice: '更新に成功しました'
@@ -43,6 +41,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:name, :body, :image)
   end
