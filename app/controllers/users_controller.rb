@@ -10,9 +10,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if @user != current_user
-      redirect_to users_path, alert: '不正なアクセスです。あなたはこのユーザーではありません。'
-    end
+    redirect_to users_path, alert: '不正なアクセスです。あなたはこのユーザーではありません。' if @user != current_user
   end
 
   def update
@@ -24,6 +22,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:nickname, :email, :profile, :profile_image)
   end
