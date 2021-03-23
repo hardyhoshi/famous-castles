@@ -1,5 +1,5 @@
 <div class="main-image menu-content">
-  <h2>日本100名城に行こう</h2>
+  <h2>日本100名城に<br>行こう</h2>
 </div>
 
 <div class="head_post">
@@ -12,18 +12,14 @@
       <%= link_to post_path(post.id) do %>
         <%= attachment_image_tag post, :image %>
       <% end %>
-      <p>コメント: <%= post.body %></p>
-      <p>投稿者: 
-        <%= link_to user_path(post.id) do %>
-          <%= post.user.nickname %>
-        <% end %></p>
+      <div class="item-info">
+        <p><span>感想:</span> <%= post.body %></p>
+        <p class="coment-user"><span>投稿者:</span> 
+          <%= link_to user_path(post.id) do %>
+            <%= post.user.nickname %>
+          <% end %>
+        </p>
+      </div>
     </div>
   <% end %>
 </div>
-
-<div class="map">
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dQbEaPguM8vXuQpqM6VHZi_5OySdKzp8" width="1280" height="960"></iframe>
-</div>
-
-<%# 今後実装予定 %>
-<%# <p>全国／北海道・東北／関東・甲信越／北陸・東海／近畿／中国・四国／九州・沖縄</p> %>
