@@ -25,13 +25,15 @@
 
 .main-image {
   background-image: image-url("top-image.jpg");
-  height: 960px;
-  resize: horizontal;
+  background-position: center;
+  width: 100%;
+  height: 100%;
   h2 {
     text-align: center;
+    align-items: center;
     font-size: 8rem;
     color: #FF99FF	;
-    padding-top: 20%;
+    padding: 20%;
   }
 }
 
@@ -39,8 +41,24 @@
   display: grid;
   gap: 26px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin-top: 6%;
-  margin-bottom: 50px;
+  margin: 40px 20px; 
+  .item {
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 1.0);
+    border-radius: 5px;
+    padding: 20px;
+    .item-info {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      span {
+        font-weight: bold;
+      }
+      .coment-user {
+        margin-top: auto;
+      }
+    }
+  }
   h2 {
     font-size: 24px;
   }
@@ -52,6 +70,7 @@
 .head_post {
   width: 100%;
   h2 {
+    font-weight: bold;
     width: 100%;
     display: inline-block;
     background-repeat: no-repeat;
